@@ -104,8 +104,11 @@ record(longin, "$(P)$(R)$(C)_Vfbk_RBV"){
 }
 
 record(longout, "$(P)$(R)$(C)_Vth_coarse"){
-    field(DTYP, "asynInt32")
-    field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))TPX3_VTH_COARSE")
+  field(DTYP, "asynInt32")
+  field(VAL,  "0")
+  field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))TPX3_VTH_COARSE")
+
+  info(autosaveFields, "VAL")
 }
 
 record(longin, "$(P)$(R)$(C)_Vth_coarse_RBV"){
@@ -115,8 +118,11 @@ record(longin, "$(P)$(R)$(C)_Vth_coarse_RBV"){
 }
 
 record(longout, "$(P)$(R)$(C)_Vth_fine"){
-    field(DTYP, "asynInt32")
-    field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))TPX3_VTH_FINE")
+  field(DTYP, "asynInt32")
+  field("VAL", "0")
+
+  info(autosaveFields, "VAL")
+  field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))TPX3_VTH_FINE")
 }
 
 record(longin, "$(P)$(R)$(C)_Vth_fine_RBV"){
